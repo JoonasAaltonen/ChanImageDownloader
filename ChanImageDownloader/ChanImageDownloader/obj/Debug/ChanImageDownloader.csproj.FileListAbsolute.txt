@@ -1,0 +1,14 @@
+D:\VisualStudio Projects\Mahtikoodia 2\ChanImageDownloader\ChanImageDownloader\bin\Debug\ChanImageDownloader.exe.config
+D:\VisualStudio Projects\Mahtikoodia 2\ChanImageDownloader\ChanImageDownloader\bin\Debug\ChanImageDownloader.exe
+D:\VisualStudio Projects\Mahtikoodia 2\ChanImageDownloader\ChanImageDownloader\bin\Debug\ChanImageDownloader.pdb
+D:\VisualStudio Projects\Mahtikoodia 2\ChanImageDownloader\ChanImageDownloader\obj\Debug\ChanImageDownloader.csprojResolveAssemblyReference.cache
+D:\VisualStudio Projects\Mahtikoodia 2\ChanImageDownloader\ChanImageDownloader\obj\Debug\MainWindow.g.cs
+D:\VisualStudio Projects\Mahtikoodia 2\ChanImageDownloader\ChanImageDownloader\obj\Debug\App.g.cs
+D:\VisualStudio Projects\Mahtikoodia 2\ChanImageDownloader\ChanImageDownloader\obj\Debug\ChanImageDownloader_MarkupCompile.cache
+D:\VisualStudio Projects\Mahtikoodia 2\ChanImageDownloader\ChanImageDownloader\obj\Debug\ChanImageDownloader_MarkupCompile.lref
+D:\VisualStudio Projects\Mahtikoodia 2\ChanImageDownloader\ChanImageDownloader\obj\Debug\MainWindow.baml
+D:\VisualStudio Projects\Mahtikoodia 2\ChanImageDownloader\ChanImageDownloader\obj\Debug\ChanImageDownloader.g.resources
+D:\VisualStudio Projects\Mahtikoodia 2\ChanImageDownloader\ChanImageDownloader\obj\Debug\ChanImageDownloader.Properties.Resources.resources
+D:\VisualStudio Projects\Mahtikoodia 2\ChanImageDownloader\ChanImageDownloader\obj\Debug\ChanImageDownloader.csproj.GenerateResource.Cache
+D:\VisualStudio Projects\Mahtikoodia 2\ChanImageDownloader\ChanImageDownloader\obj\Debug\ChanImageDownloader.exe
+D:\VisualStudio Projects\Mahtikoodia 2\ChanImageDownloader\ChanImageDownloader\obj\Debug\ChanImageDownloader.pdb

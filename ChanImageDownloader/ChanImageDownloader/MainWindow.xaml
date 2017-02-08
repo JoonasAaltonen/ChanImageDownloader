@@ -1,0 +1,18 @@
+﻿<Window x:Class="ChanImageDownloader.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChanImageDownloader"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <TextBox x:Name="UrlBox" HorizontalAlignment="Left" Height="73" Margin="97,96,0,0" TextWrapping="Wrap" Text="Enter the thread URL" VerticalAlignment="Top" Width="325"/>
+        <Label x:Name="TitleText" Content="Chan image downloader" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="34" Width="497" FontSize="18.667"/>
+        <Button x:Name="button" Content="Download" HorizontalAlignment="Left" Margin="226,174,0,0" VerticalAlignment="Top" Width="74" Click="button_Click"/>
+        <TextBlock x:Name="StatusBox" HorizontalAlignment="Left" Margin="132,220,0,0" TextWrapping="Wrap" Text="Status" VerticalAlignment="Top" Height="22" Width="260"/>
+        <ProgressBar HorizontalAlignment="Left" Height="19" Margin="132,261,0,0" VerticalAlignment="Top" Width="260" Name="ProgressBar"/>
+        <TextBox x:Name="PathBox" HorizontalAlignment="Left" Height="29" Margin="97,49,0,0" TextWrapping="Wrap" Text="Enter the path to the folder you want your downloaded files" VerticalAlignment="Top" Width="325"/>
+
+    </Grid>
+</Window>
