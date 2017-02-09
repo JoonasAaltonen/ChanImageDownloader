@@ -15,6 +15,8 @@ namespace ChanImageDownloader
         private int _downloadedImagesCount = 0;
         private Uri[] _imageUrisGuess = new Uri[1000];
         private Uri[] _imageUrisFinal;
+        private string[] _fileTypesGuess = new string[1000];
+        private string[] _fileTypesFinal;
 
         // http://boards.4chan.org/pol/thread/111395819/a-stable-multicultural-liberal-democracy-with
 
@@ -75,6 +77,7 @@ namespace ChanImageDownloader
             bool lineFound = false;
             string imageLink = "";
             Uri imageUri = null;
+            string fileType = "";
             int counter = 0;
             for (int i = 0; i < htmlString.Length - 24; i++)
             {
@@ -93,10 +96,13 @@ namespace ChanImageDownloader
                         {
                             linkEndIndex = j;
                             lineFound = false;
+
                             imageLink = htmlString.Substring(linkStartIndex, linkEndIndex - linkStartIndex);
                             Console.WriteLine("\nIMAGE LINK: {0}\n", imageLink);
-                            imageUri = new Uri("http://"+ RemoveWhiteSpace(imageLink));
+                            fileType = "";
+                            imageUri = new Uri("http://"+ RemoveWhiteSpace(imageLink, out fileType));
                             _imageUrisGuess[counter] = imageUri;
+                            _fileTypesGuess[counter] = fileType;
                             counter++;
                             break;
                         }
@@ -105,22 +111,24 @@ namespace ChanImageDownloader
             }
             Console.WriteLine("{0} links found!", counter);
             _imageUrisFinal = new Uri[counter];
+            _fileTypesFinal = new string[counter];
             for (int i = 0; i < counter; i++)
             {
                 if (_imageUrisGuess[i] != null)
                 {
                     _imageUrisFinal[i] = _imageUrisGuess[i];
+                    _fileTypesFinal[i] = _fileTypesGuess[i];
                 }
             }
             _mWindow.UpdateText("Downloading files");
-            DownloadImage(_imageUrisFinal);
+            DownloadImage(_imageUrisFinal, _fileTypesFinal);
         }
 
 
-        private void DownloadImage(Uri[] linkUris)
+        private void DownloadImage(Uri[] linkUris, string[] fileTypes)
         {
             string filePath = _mWindow.PathBox.Text;
-            string fileSuffix = @"\file" + _downloadedImagesCount + ".jpg";
+            string fileSuffix = @"\file" + _downloadedImagesCount + fileTypes[_downloadedImagesCount];
 
             if (_client.IsBusy == false)
             {
@@ -147,15 +155,25 @@ namespace ChanImageDownloader
             Console.WriteLine("Images downloaded: {0}", _downloadedImagesCount);
             if (_downloadedImagesCount < _imageUrisFinal.Length-1 )
             {
-                DownloadImage(_imageUrisFinal);
+                DownloadImage(_imageUrisFinal, _fileTypesFinal);
             }
             else _mWindow.UpdateText("Downloads finished!");
         }
 
-        private string RemoveWhiteSpace(string input)
+        private string RemoveWhiteSpace(string input, out string fileType)
         {
             char[] inputArr = input.ToCharArray();
             char[] outputArr = new char[inputArr.Length];
+
+            if (inputArr[inputArr.Length - 3] == 'e')
+            {
+                fileType = ".webm";
+            }
+            else if (inputArr[inputArr.Length - 3] == 'g')
+            {
+                fileType = ".gif";
+            }
+            else fileType = ".jpg";
             for (int i = 0; i < inputArr.Length; i++)
             {
                 if (char.IsWhiteSpace(inputArr[i]) == false)
