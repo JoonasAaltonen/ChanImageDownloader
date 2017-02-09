@@ -12,3 +12,6 @@ D:\VisualStudio Projects\Mahtikoodia 2\ChanImageDownloader\ChanImageDownloader\o
 D:\VisualStudio Projects\Mahtikoodia 2\ChanImageDownloader\ChanImageDownloader\obj\Debug\ChanImageDownloader.csproj.GenerateResource.Cache
 D:\VisualStudio Projects\Mahtikoodia 2\ChanImageDownloader\ChanImageDownloader\obj\Debug\ChanImageDownloader.exe
 D:\VisualStudio Projects\Mahtikoodia 2\ChanImageDownloader\ChanImageDownloader\obj\Debug\ChanImageDownloader.pdb
+D:\VisualStudio Projects\Mahtikoodia 2\ChanImageDownloaderRepo\ChanImageDownloader\ChanImageDownloader\bin\Debug\ChanImageDownloader.exe.config
+D:\VisualStudio Projects\Mahtikoodia 2\ChanImageDownloaderRepo\ChanImageDownloader\ChanImageDownloader\obj\Debug\ChanImageDownloader.exe
+D:\VisualStudio Projects\Mahtikoodia 2\ChanImageDownloaderRepo\ChanImageDownloader\ChanImageDownloader\obj\Debug\ChanImageDownloader.pdb
